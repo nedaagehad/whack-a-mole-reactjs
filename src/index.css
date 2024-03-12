@@ -5,7 +5,7 @@ body {
   display: flex;
   align-items: center;
   background-color: #007300;
-  background-image: url("./assets/grass.svg");
+  background-image: url("./assets/images/grass.svg");
   background-size: 30px 30px;
   justify-content: center;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -13,9 +13,4 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }

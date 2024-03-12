@@ -1,14 +1,8 @@
-import { useDispatch } from "react-redux";
 import "./utils/styles.css";
-import { increaseScore } from "../../store/scoreSlice";
+import { whackTheMole } from "./utils/whackTheMole";
 
 const Mole = () => {
-  const dispatch = useDispatch()
-  const whackTheMole = () => {
-    dispatch(increaseScore({
-      score: 10
-    }))
-  }
+  
   return (
     <div className="mole" onClick={whackTheMole}>
       <div className="eyes">

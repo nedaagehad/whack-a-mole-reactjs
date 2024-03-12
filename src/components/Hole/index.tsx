@@ -1,10 +1,7 @@
-import Mole from "../Mole";
+import { IHoleProps } from "./utils/types";
+import "./utils/styles.css"
 
-type props = {
-  index: number;
-};
-
-const Hole = ({ index }: props) => {
+const Hole = ({ index }: IHoleProps) => {
   return <div className="hole" id={index.toString()} />;
 };
 
