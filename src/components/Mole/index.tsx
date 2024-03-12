@@ -1,14 +1,45 @@
+import "./utils/styles.css";
 
 const Mole = () => {
   return (
-    <div className="mole-animation" style={{ width: "120px", height: "130px", borderRadius: "45% 45% 0 0", position: "absolute"}}>
-        <div className="eye" style={{ width: "10px", height: "10px", background: "#000", borderRadius: "50%", position: "absolute", left: "30px", top: "30px"}}></div>
-        <div className="eye" style={{ width: "10px", height: "10px", background: "#000", borderRadius: "50%", position: "absolute", right: "30px", top: "30px"}}></div>
-        <div className="nose" style={{ width: "30px", height: "30px", background: "#000", borderRadius: "50%", position: "absolute", right: "45px", top: "40px", zIndex: 2}}></div>
-        <div className="lips" style={{ width: "40px", height: "40px", background: "#fdba95", borderRadius: "50%", position: "absolute", right: "25px", top: "50px", zIndex: 1}}></div>
-        <div className="lips" style={{ width: "40px", height: "40px", background: "#fdba95", borderRadius: "50%", position: "absolute", left: "25px", top: "50px", zIndex: 1}}></div>
+    <div className="mole">
+      <div className="eyes">
+        <div className="eye left">
+          <div className="pupil">
+            <div className="eye-light" />
+          </div>
+        </div>
+        <div className="eye right">
+        <div className="pupil">
+            <div className="eye-light" />
+          </div>
+        </div>
+      </div>
+      <div
+        className="nose"
+      />
+      <div className="mouth">
+      <div
+        className="lip right"
+      >
+       <div className="mustache top"/>
+       <div className="mustache middle"/>
+       <div className="mustache bottom"/>
+      </div>
+      <div
+        className="lip left"
+      >
+        <div className="mustache top"/>
+       <div className="mustache middle"/>
+       <div className="mustache bottom"/>
+      </div>
+      <div className="teeth">
+      <div className="tooth left"/>
+      <div className="tooth right"/>
+      </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Mole
+export default Mole;

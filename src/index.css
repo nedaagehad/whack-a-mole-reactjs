@@ -4,7 +4,9 @@ body {
   overflow: hidden;
   display: flex;
   align-items: center;
-  background-color: green;
+  background-color: #007300;
+  background-image: url("./assets/grass.svg");
+  background-size: 30px 30px;
   justify-content: center;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',

@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit'
 import moleIndexReducer from './MoleIndexSlice/index'
+import scoreReducer from './scoreSlice/index'
 
 export const store = configureStore({
   reducer: {
-    moleIndex: moleIndexReducer
+    moleIndex: moleIndexReducer,
+    score: scoreReducer
   },
 })
 

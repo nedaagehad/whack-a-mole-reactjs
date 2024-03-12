@@ -9,7 +9,6 @@ import { setMoleIndex } from "../../store/MoleIndexSlice";
 
 const Board = () => {
   const [stopMole, setStopMole] = useState<boolean>(false);
-  const [score, setScore] = useState<number>(0);
   const dispatch = useDispatch();
   const { moleIndex } = useSelector((state: RootState) => state.moleIndex);
 
@@ -20,7 +19,7 @@ const Board = () => {
           moleIndex: generateRandomIndex(moleIndex),
         })
       );
-    }, 500);
+    }, 1000);
 
     if (stopMole) clearInterval(interval);
 
@@ -41,6 +40,7 @@ const Board = () => {
         <div
           className="hole-wapper"
           style={{
+            width: "100%",
             position: "relative",
             height: "80%",
             display: "flex",
@@ -52,8 +52,8 @@ const Board = () => {
           id={i.toString()}
           key={i}
         >
-          {displayMole(i)}
           <Hole index={i} />
+          {displayMole(i)}
         </div>
       );
     }

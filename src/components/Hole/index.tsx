@@ -5,11 +5,7 @@ type props = {
 };
 
 const Hole = ({ index }: props) => {
-  return (
-    <div className="hole" id={index.toString()}>
-      {/* {moleIndex === index && <Mole />} */}
-    </div>
-  );
+  return <div className="hole" id={index.toString()} />;
 };
 
 export default Hole;

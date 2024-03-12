@@ -19,22 +19,5 @@
   0px 2px 1px rgba(0, 0, 0, 0.3);
   border-radius: 50%;
   height: 50px;
-  width: 100%;
-}
-
-.mole-animation {
-  animation: rise 0.3s ease-out;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
-  background-image: linear-gradient(to bottom, #764a2c 75%, transparent);
-}
-
-@keyframes rise {
-  0% {
-    transform: translateX(-50%) translateY(100%);
-  }
-  100% {
-    transform: translateX(-50%) translateY(0%);
-  }
+  width: 98%;
 }
