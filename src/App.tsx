@@ -1,10 +1,11 @@
 import "./App.css";
 import Board from "./components/Board/index";
+import Score from "./components/Score";
 
 function App() {
   return (
     <div>
-      {/* <h2>score: {score * 10}</h2> */}
+      <Score/>
       <Board />
     </div>
   );
