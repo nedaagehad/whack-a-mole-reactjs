@@ -1,7 +1,22 @@
-.score {
-    font-family: fantasy;
-    font-size: 50px;
-    color: whitesmoke;
-    letter-spacing: 2px;
+.score-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 200px;
+}
+
+.score-text {
+    font-size: 42px;
+    color: #0A3442;
+    width: 155px;
+    background-color: #FFF;
+    text-align: center;
+    border-radius: 15px;
+    transform: translateX(45px);
     text-shadow: 0 5px 2px rgba(0, 0, 0, 0.3);
+}
+
+.star {
+    position: absolute;
+    z-index: 1;
 }
