@@ -12,8 +12,6 @@ const Board = () => {
   const { moleIndex } = useSelector((state: RootState) => state.moleIndex);
   const { start } = useSelector((state: RootState) => state.startGame);
 
-  console.log(moleIndex)
-
   useEffect(() => {
     let interval: ReturnType<typeof setInterval>;
     if (start) {
@@ -23,7 +21,7 @@ const Board = () => {
             moleIndex: generateRandomIndex(moleIndex),
           })
         );
-      }, 1000);
+      }, 800);
     }
 
     return () => {
@@ -66,7 +64,7 @@ const Board = () => {
 
   return (
     <>
-      <div role="presentation" className="board" onClick={() => console.log("clicked on board")}>{displayHoles().map((item) => item)}</div>
+      <div role="presentation" className="board">{displayHoles().map((item) => item)}</div>
       {/* <Mallet/> */}
     </>
   );

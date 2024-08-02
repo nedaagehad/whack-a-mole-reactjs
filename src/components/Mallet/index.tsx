@@ -25,7 +25,6 @@ const Mallet = () => {
       }}
       onClick={(e) => {
         e.preventDefault();
-        console.log("clicked on mallet");
       }}
       onMouseDown={(e) => {
         e.preventDefault();
