@@ -2,7 +2,7 @@ import "./utils/styles.css";
 import { whackTheMole } from "./utils/whackTheMole";
 
 const Mole = () => {
-  
+
   return (
     <div className="mole" onClick={whackTheMole}>
       <div className="eyes">

@@ -7,4 +7,5 @@ export const whackTheMole = () => {
       score: 10
     }))
     playWhackSound()
+    console.log("first")
   }

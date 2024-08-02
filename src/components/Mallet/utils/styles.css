@@ -1,0 +1,10 @@
+.mallet {
+  position: "absolute";
+  width: "150px";
+  height: "150px";
+  left: 0;
+  right: 0;
+  /* pointer-events: none; */
+  background-image: url("../../../assets/images/mallet.png");
+  /* background-size: 100px 100px; */
+}

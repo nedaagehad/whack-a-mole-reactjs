@@ -9,7 +9,7 @@
     top: 5px;
     background-image: linear-gradient(to bottom, #634210 82%, transparent);
   }
-  
+
   @keyframes rise {
     0% {
       transform: translateX(-50%) translateY(100%);
