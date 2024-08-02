@@ -2,12 +2,14 @@ import { configureStore } from '@reduxjs/toolkit'
 import moleIndexReducer from './MoleIndexSlice/index'
 import scoreReducer from './scoreSlice/index'
 import startGameReducer from './StartGameSlice/index'
+import timerReducer from './timerSlice/index'
 
 export const store = configureStore({
   reducer: {
     moleIndex: moleIndexReducer,
     score: scoreReducer,
-    startGame: startGameReducer
+    startGame: startGameReducer,
+    timer: timerReducer
   },
 })
 

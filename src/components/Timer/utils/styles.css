@@ -1,0 +1,28 @@
+.timer-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 236px;
+}
+
+.progress-bar {
+    width: 200px;
+    height: 35px;
+    background-color: #0A3442;
+    border-radius: 15px;
+    border: 5px solid #FFF;
+    transform: translateX(36px);
+    overflow: hidden;
+    padding-left: 20px;
+}
+
+.inner-bar {
+    height: 100%;
+    background-color: #02799D;
+    border-radius: initial;
+}
+
+.clock {
+    position: absolute;
+    z-index: 1;
+}
