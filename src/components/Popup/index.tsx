@@ -10,6 +10,7 @@ import {
   startGamePopupContent,
 } from "./utils/PopupContent";
 import { useEffect, useState } from "react";
+import { resetscore } from "../../store/scoreSlice";
 
 const Popup = () => {
   const dispatch = useDispatch();
@@ -25,6 +26,7 @@ const Popup = () => {
 
   const handleClick = () => {
     dispatch(resetTimer());
+    dispatch(resetscore());
     dispatch(startGame());
   };
   return (
@@ -45,3 +47,4 @@ const Popup = () => {
 };
 
 export default Popup;
+
