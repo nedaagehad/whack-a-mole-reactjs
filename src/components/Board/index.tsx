@@ -43,7 +43,7 @@ const Board = () => {
           style={{
             width: "100%",
             position: "relative",
-            height: "100%",
+            height: "8rem",
             display: "flex",
             flexDirection: "column",
             justifyContent: "flex-end",
@@ -58,7 +58,7 @@ const Board = () => {
           <div
             style={{
               position: "absolute",
-              top: 0,
+              bottom: 0,
               width: "100%",
               height: "100%",
               overflow: "hidden",

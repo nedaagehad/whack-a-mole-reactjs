@@ -1,45 +1,12 @@
 import "./utils/styles.css";
 import { whackTheMole } from "./utils/whackTheMole";
+import {ReactComponent as MoleIcon} from "../../assets/images/mole.svg"
 
 const Mole = () => {
 
   return (
-    <div className="mole" onClick={whackTheMole}>
-      <div className="eyes">
-        <div className="eye left">
-          <div className="pupil">
-            <div className="eye-light" />
-          </div>
-        </div>
-        <div className="eye right">
-        <div className="pupil">
-            <div className="eye-light" />
-          </div>
-        </div>
-      </div>
-      <div
-        className="nose"
-      />
-      <div className="mouth">
-      <div
-        className="lip right"
-      >
-       <div className="mustache top"/>
-       <div className="mustache middle"/>
-       <div className="mustache bottom"/>
-      </div>
-      <div
-        className="lip left"
-      >
-        <div className="mustache top"/>
-       <div className="mustache middle"/>
-       <div className="mustache bottom"/>
-      </div>
-      <div className="teeth">
-      <div className="tooth left"/>
-      <div className="tooth right"/>
-      </div>
-      </div>
+    <div role="presentation" className="mole" onClick={whackTheMole}>
+      <MoleIcon/>
     </div>
   );
 };
