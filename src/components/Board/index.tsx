@@ -15,7 +15,7 @@ const Board = () => {
   useEffect(() => {
     let interval: ReturnType<typeof setInterval>;
     if (start) {
-       interval = setInterval(() => {
+      interval = setInterval(() => {
         dispatch(
           setMoleIndex({
             moleIndex: generateRandomIndex(moleIndex),
@@ -27,7 +27,7 @@ const Board = () => {
     return () => {
       clearInterval(interval);
     };
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [moleIndex, start]);
 
   const displayMole = (holeIndex: number) => {
@@ -43,18 +43,29 @@ const Board = () => {
           style={{
             width: "100%",
             position: "relative",
-            height: "80%",
+            height: "100%",
             display: "flex",
             flexDirection: "column",
             justifyContent: "flex-end",
             alignItems: "center",
-            overflow: "hidden",
           }}
           id={i.toString()}
           key={i}
         >
-          <Hole index={i} />
-          {displayMole(i)}
+          <div style={{ position: "absolute", width: "100%", bottom: "-20px" }}>
+            <Hole index={i} />
+          </div>
+          <div
+            style={{
+              position: "absolute",
+              top: 0,
+              width: "100%",
+              height: "100%",
+              overflow: "hidden",
+            }}
+          >
+            {displayMole(i)}
+          </div>
         </div>
       );
     }
@@ -64,7 +75,9 @@ const Board = () => {
 
   return (
     <>
-      <div role="presentation" className="board">{displayHoles().map((item) => item)}</div>
+      <div role="presentation" className="board">
+        {displayHoles().map((item) => item)}
+      </div>
       {/* <Mallet/> */}
     </>
   );
