@@ -1,7 +1,7 @@
 .mole {
   height: 100%;
   position: absolute;
-  animation: rise 0.3s ease-out;
+  animation: rise 1.5s ease-out;
   left: 50%;
   transform: translateX(-50%);
   bottom: 0;
@@ -12,7 +12,16 @@
   0% {
     transform: translateX(-50%) translateY(100%);
   }
-  100% {
+  25% {
     transform: translateX(-50%) translateY(0%);
+  }
+  50% {
+    transform: translateX(-50%) translateY(0%);
+  }
+  75% {
+    transform: translateX(-50%) translateY(0%);
+  }
+  100% {
+    transform: translateX(-50%) translateY(100%);
   }
 }

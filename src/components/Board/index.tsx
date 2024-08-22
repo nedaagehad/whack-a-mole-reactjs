@@ -21,7 +21,7 @@ const Board = () => {
             moleIndex: generateRandomIndex(moleIndex),
           })
         );
-      }, 800);
+      }, 1500);
     }
 
     return () => {
