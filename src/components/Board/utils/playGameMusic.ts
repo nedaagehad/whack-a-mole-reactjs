@@ -1,7 +1,7 @@
-export const playGameMusic = (audioSrc: string) => {
-    const gameMusic = new Audio(audioSrc)
-    gameMusic.pause()
-    gameMusic.currentTime = 0
-    gameMusic.play()
-    gameMusic.loop = true
-  }
+export const playGameMusic = (audioSrc: HTMLAudioElement) => {
+  audioSrc
+    .play()
+    .catch((error) => console.log("Failed to play audio ::", error));
+  audioSrc.volume = 0.3;
+  audioSrc.loop = true;
+};

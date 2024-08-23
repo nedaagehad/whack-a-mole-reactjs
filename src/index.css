@@ -4,6 +4,7 @@ body {
   overflow: hidden;
   display: flex;
   align-items: center;
+  user-select: none;
   background-color: #007300;
   background-image: url("./assets/images/grass.svg");
   background-size: cover;
