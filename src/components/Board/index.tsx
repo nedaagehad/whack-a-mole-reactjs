@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import Hole from "../Hole";
 import Mole from "../Mole";
 import generateRandomIndex from "../../utils/GenerateRandomIndex";
-// import Mallet from "../Mallet";
 import { useDispatch, useSelector } from "react-redux";
 import type { RootState } from "../../store/store";
 import { setMoleIndex } from "../../store/MoleIndexSlice";
@@ -74,12 +73,9 @@ const Board = () => {
   };
 
   return (
-    <>
-      <div role="presentation" className="board">
-        {displayHoles().map((item) => item)}
-      </div>
-      {/* <Mallet/> */}
-    </>
+    <div role="presentation" className="board">
+      {displayHoles().map((item) => item)}
+    </div>
   );
 };
 

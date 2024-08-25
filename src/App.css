@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
 }
 
 .board {
@@ -15,6 +16,11 @@
   align-items: center;
   gap: 24px;
   padding: 30px;
+  cursor: url("./assets//images/mallet.png") 35 35, auto;
+}
+
+.board:active {
+  cursor: url("./assets//images/mallet-tilted.png") 35 35, auto;
 }
 
 .sound-button {
@@ -27,4 +33,8 @@
   outline: none;
   width: 50px;
   height: 50px;
+}
+
+button, .inherit-cursor {
+  cursor: pointer;
 }
