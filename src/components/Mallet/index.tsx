@@ -1,53 +1,40 @@
-import { useState } from "react";
-import MalletSrc from "../../assets/images/mallet.png";
+import { useEffect, useRef } from "react";
 import "./utils/styles.css";
 
-const Mallet = () => {
-  const [horizontalMove, setHorizontalMove] = useState(0);
-  const [verticalMove, setVerticalMove] = useState(0);
-  const [clicked, setClicked] = useState(false);
+interface IMalletProps {
+  coordinates: {
+    x: number;
+    y: number;
+  };
+  reference: React.LegacyRef<HTMLDivElement>
+}
+
+const Mallet = ({ coordinates, reference }: IMalletProps) => {
+  // const malletRef = useRef<HTMLDivElement>(null);
+
+  // useEffect(() => {
+  //   requestAnimationFrame(() => {
+  //     if (malletRef.current) {
+  //       malletRef.current.style.left = `${coordinates.x - 30}px`;
+  //       malletRef.current.style.top = `${coordinates.y - 10}px`;
+  //     }
+  //   });
+  // }, [malletRef, coordinates.x, coordinates.y]);
 
   return (
     <div
-      role="presentation"
+      ref={reference}
       className="mallet"
       style={{
-        left: horizontalMove,
-        top: verticalMove,
-        transform: clicked
-            ? "translateX(-70px) translateY(-25px) rotate(-45deg)"
-            : "translateX(-70px) translateY(-25px)",
-          transition: "transform 0.1s",
-      }}
-      onMouseMove={(e) => {
-        setHorizontalMove(e.pageX);
-        setVerticalMove(e.pageY);
-      }}
-      onClick={(e) => {
-        e.preventDefault();
-      }}
-      onMouseDown={(e) => {
-        e.preventDefault();
-        setClicked(true);
-      }}
-      onMouseUp={(e) => {
-        e.preventDefault();
-        setClicked(false);
+        // left: coordinates.x - 30,
+        // top: coordinates.y - 10,
+        // transform: clicked
+        //     ? "translateX(-70px) translateY(-25px) rotate(-45deg)"
+        //     : "translateX(-70px) translateY(-25px)",
+        //   transition: "transform 0.1s",
       }}
     >
-      {/* <img
-        alt="Mallet"
-        src={MalletSrc}
-        style={{
-          position: "absolute",
-          left: horizontalMove,
-          top: verticalMove,
-          width: "150px",
-          height: "150px",
-          pointerEvents: "none",
-          
-        }}
-      /> */}
+      {" "}
     </div>
   );
 };

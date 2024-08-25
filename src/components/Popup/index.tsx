@@ -6,23 +6,16 @@ import { resetTimer } from "../../store/timerSlice";
 import { RootState } from "../../store/store";
 import {
   IPopupContent,
-  retryGamePopupContent,
-  startGamePopupContent,
+  returnPopupContent,
 } from "./utils/PopupContent";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { resetscore } from "../../store/scoreSlice";
 
 const Popup = () => {
   const dispatch = useDispatch();
-  const [content, setContent] = useState<IPopupContent>(startGamePopupContent);
-
   const { timer } = useSelector((state: RootState) => state.timer);
   const { score } = useSelector((state: RootState) => state.score);
-
-  useEffect(() => {
-    if (timer === 0) setContent(retryGamePopupContent);
-    else setContent(startGamePopupContent);
-  }, [timer]);
+  const [content] = useState<IPopupContent>(returnPopupContent(timer));
 
   const handleClick = () => {
     dispatch(resetTimer());
