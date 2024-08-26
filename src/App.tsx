@@ -10,6 +10,7 @@ import IntroMusic from "./assets/audio/arcade-intro.mp3";
 import InGameMusic from "./assets/audio/in-game-music.mp3";
 import { ReactComponent as SoundOn } from "./assets/images/sound-on.svg";
 import { ReactComponent as SoundOff } from "./assets/images/sound-off.svg";
+import ReactConfetti from "react-confetti";
 
 function App() {
   const { start } = useSelector((state: RootState) => state.startGame);
@@ -36,6 +37,13 @@ function App() {
 
   return (
     <div className="main-box">
+      <ReactConfetti
+        gravity={10}
+        numberOfPieces={2000}
+        recycle={false}
+        width={window.innerWidth}
+        height={window.innerHeight}
+      />
       <button
         className="sound-button"
         onClick={() => setMuteMusic((prev) => !prev)}
