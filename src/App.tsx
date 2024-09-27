@@ -8,8 +8,8 @@ import { useEffect, useState } from "react";
 import { playGameMusic } from "./components/Board/utils/playGameMusic";
 import IntroMusic from "./assets/audio/arcade-intro.mp3";
 import InGameMusic from "./assets/audio/in-game-music.mp3";
-import { ReactComponent as SoundOn } from "./assets/images/sound-on.svg";
-import { ReactComponent as SoundOff } from "./assets/images/sound-off.svg";
+import { ReactComponent as MusicOn } from "./assets/images/music-on.svg";
+import { ReactComponent as MusicOff } from "./assets/images/music-off.svg";
 
 function App() {
   const { start } = useSelector((state: RootState) => state.startGame);
@@ -41,9 +41,9 @@ function App() {
         onClick={() => setMuteMusic((prev) => !prev)}
       >
         {muteMusic ? (
-          <SoundOff className=".inherit-cursor" width={50} height={50} />
+          <MusicOff className=".inherit-cursor" width={50} height={50} />
         ) : (
-          <SoundOn className=".inherit-cursor" width={50} height={50} />
+          <MusicOn className=".inherit-cursor" width={50} height={50} />
         )}
       </button>
       <Header />
