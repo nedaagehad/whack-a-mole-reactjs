@@ -10,9 +10,11 @@ import IntroMusic from "./assets/audio/arcade-intro.mp3";
 import InGameMusic from "./assets/audio/in-game-music.mp3";
 import { ReactComponent as MusicOn } from "./assets/images/music-on.svg";
 import { ReactComponent as MusicOff } from "./assets/images/music-off.svg";
+import ReactConfetti from "react-confetti";
 
 function App() {
   const { start } = useSelector((state: RootState) => state.startGame);
+  const { score } = useSelector((state: RootState) => state.score);
   const [muteMusic, setMuteMusic] = useState<boolean>(true);
 
   useEffect(() => {
@@ -36,6 +38,14 @@ function App() {
 
   return (
     <div className="main-box">
+     {!start && Boolean(score) && <ReactConfetti
+        gravity={0.1}
+        numberOfPieces={2000}
+        recycle={false}
+        style={{ zIndex: 10}}
+        width={window.innerWidth}
+        height={window.innerHeight}
+      />}
       <button
         className="sound-button"
         onClick={() => setMuteMusic((prev) => !prev)}
