@@ -15,8 +15,9 @@ const Mole = () => {
         whackTheMole();
         setWhacked(true)
       }}
+      onDrag={(e) => e.preventDefault()}
     >
-      <img alt="mole" src={whacked ? WhackedIcon : MoleIcon} />
+      <img draggable={false} alt="mole" src={whacked ? WhackedIcon : MoleIcon} />
     </div>
   );
 };
