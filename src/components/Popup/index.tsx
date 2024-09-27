@@ -10,6 +10,7 @@ import {
 } from "./utils/PopupContent";
 import { useState } from "react";
 import { resetscore } from "../../store/scoreSlice";
+import { playClickSound } from "./utils/playClickSound";
 
 const Popup = () => {
   const dispatch = useDispatch();
@@ -18,6 +19,7 @@ const Popup = () => {
   const [content] = useState<IPopupContent>(returnPopupContent(timer));
 
   const handleClick = () => {
+    playClickSound()
     dispatch(resetTimer());
     dispatch(resetscore());
     dispatch(startGame());
