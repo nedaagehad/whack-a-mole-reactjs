@@ -4,5 +4,6 @@ export const playClickSound = () => {
   const click = new Audio(clickSound)
 
   click.currentTime = 0
+  click.playbackRate = 2
   click.play()
   }

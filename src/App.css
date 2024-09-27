@@ -4,7 +4,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  cursor: pointer;
   user-select: none;
 }
 
@@ -24,18 +23,28 @@
   cursor: url("./assets//images/mallet-tilted.png") 35 35, auto;
 }
 
-.sound-button {
+.music-section {
   position: fixed;
   right: 30px;
   top: 30px;
   z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.music-button {
   background: none;
   border: none;
   outline: none;
-  width: 50px;
-  height: 50px;
 }
 
 button, .inherit-cursor {
   cursor: pointer;
+}
+
+.music-hint {
+  font-size: 24px;
+  color: #FFF;
+  -webkit-text-stroke: 2px #0A3442;
 }

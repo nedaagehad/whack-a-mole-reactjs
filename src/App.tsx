@@ -46,8 +46,10 @@ function App() {
         width={window.innerWidth}
         height={window.innerHeight}
       />}
-      <button
-        className="sound-button"
+     <div className="music-section">
+      {muteMusic && <p className="music-hint lilita-one-font">Click to play some cool music! &rarr;</p>}
+     <button
+        className="music-button"
         onClick={() => setMuteMusic((prev) => !prev)}
       >
         {muteMusic ? (
@@ -56,6 +58,7 @@ function App() {
           <MusicOn className=".inherit-cursor" width={50} height={50} />
         )}
       </button>
+     </div>
       <Header />
       <Board />
       {!start && <Popup />}
